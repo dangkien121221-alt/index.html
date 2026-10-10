@@ -1,0 +1,209 @@
+/* Thiết lập chung */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Thanh menu chung */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    font-size: 0.95rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+/* Bố cục chính */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section {
+    padding: 30px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-left: 5px solid #1abc9c;
+    padding-left: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Định dạng cho trang chủ (index.html) */
+.home-banner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.home-banner img {
+    flex: 1;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.home-intro {
+    flex: 2;
+}
+
+.quote-box {
+    background-color: #e8f8f5;
+    border-left: 4px solid #1abc9c;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #16a085;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Responsive cho thiết bị di động */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    .home-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-banner img {
+        max-width: 100%;
+    }
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marie Curie – Một con người làm thay đổi thế giới</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Marie Curie (1867 – 1934)</h1>
+        <p>Nhà Vật lý và Hóa học vĩ đại đi đầu trong nghiên cứu về phóng xạ</p>
+    </header>
+
+    <!-- Thanh menu liên kết 8 trang yêu cầu -->
+    <nav>
+        <a href="index.html" class="active">Trang chủ</a>
+        <a href="cuocdoi.html">Cuộc đời</a>
+        <a href="hanhtrinh.html">Hành trình</a>
+        <a href="thanhtuu.html">Thành tựu</a>
+        <a href="thuthach.html">Thử thách</a>
+        <a href="tacdong.html">Tác động</a>
+        <a href="disan_baihoc.html">Di sản & Bài học</a>
+        <a href="thuvien_nguon.html">Thư viện & Nguồn</a>
+    </nav>
+
+    <main>
+        <!-- Giới thiệu ngắn & Hình ảnh đại diện -->
+        <section>
+            <h2>Giới thiệu chung</h2>
+            <div class="home-banner">
+                <img src="images/marie_curie.jpg" alt="Chân dung Marie Curie">
+                <div class="home-intro">
+                    <p><strong>Họ tên đầy đủ:</strong> Maria Skłodowska-Curie</p>
+                    <p><strong>Lĩnh vực hoạt động:</strong> Khoa học (Vật lý và Hóa học)</p>
+                    <p>Marie Curie là nữ bác học lỗi lạc người Ba Lan – Pháp, người đặt nền móng cho ngành vật lý hạt nhân hiện đại. Bà là người phụ nữ đầu tiên giành giải Nobel, đồng thời là người duy nhất trên thế giới chiến thắng giải Nobel ở hai lĩnh vực khoa học khác nhau (Vật lý năm 1903 và Hóa học năm 1911).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thành tựu nổi bật nhất -->
+        <section>
+            <h2>Dấu ấn và Thành tựu nổi bật nhất</h2>
+            <ul>
+                <li>Phát hiện ra hai nguyên tố hóa học mới là <strong>Radium (Ra)</strong> và <strong>Polonium (Po)</strong>.</li>
+                <li>Xây dựng lý thuyết về hiện tượng phóng xạ, đi ngược lại quan niệm cũ rằng nguyên tử là không thể phân chia.</li>
+                <li>Phát triển các thiết bị chụp X-quang di động ("Little Curies") cứu chữa cho hàng triệu binh sĩ trong Thế chiến thứ nhất.</li>
+            </ul>
+        </section>
+
+        <!-- Lý do nhóm lựa chọn -->
+        <section>
+            <h2>Lý do nhóm lựa chọn nhân vật</h2>
+            <p>Chúng tôi lựa chọn Marie Curie bởi nghị lực phi thường vượt qua rào cản định kiến giới tính thời bấy giờ, tinh thần cống hiến quên mình vì khoa học nhân loại và những di sản y học vô giá mà bà để lại.</p>
+        </section>
+
+        <!-- Câu nói tiêu biểu -->
+        <section>
+            <div class="quote-box">
+                "Chúng ta không có gì trong đời phải sợ, chúng ta chỉ cần hiểu nó. Bây giờ là lúc chúng ta phải hiểu nhiều hơn để bớt sợ hãi hơn." – Marie Curie
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Dự án Tin học 12 – Chủ đề: Những con người làm thay đổi thế giới</p>
+    </footer>
+
+</body>
+</html>
